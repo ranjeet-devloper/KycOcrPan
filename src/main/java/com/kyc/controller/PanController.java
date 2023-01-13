@@ -26,7 +26,7 @@ public class PanController {
 	/**
 	 * This end point is use for getting the data from OCR.
 	 * 
-	 * @param ocrRequest
+	 * @param ocrRequest:-This request contain Base64 string type data of PAN
 	 * @return
 	 */
 	@PostMapping("/getpandetails")
@@ -35,8 +35,9 @@ public class PanController {
 		log.info(gson.toJson(String.format("Request for Ocr is %s", ocrRequest)));
 
 		OcrRequest ocrRequestObject = gson.fromJson(ocrRequest, OcrRequest.class);
+		OcrPanResponse ocrPanResponse = oCRServiceImpl.getDetails(ocrRequestObject);
 
-		log.info(gson.toJson(String.format("Request for Ocr is %s", ocrRequestObject)));
-		return ResponseEntity.ok(oCRServiceImpl.getDetails(ocrRequestObject));
+		log.info(gson.toJson(String.format("Response for ocrrequest is %s", ocrPanResponse)));
+		return ResponseEntity.ok(ocrPanResponse);
 	}
 }
