@@ -5,7 +5,6 @@ import com.kyc.common.DateOfIssue;
 import com.kyc.common.Father;
 import com.kyc.common.Name;
 import com.kyc.common.PanNO;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

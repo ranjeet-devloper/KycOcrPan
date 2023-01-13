@@ -2,14 +2,12 @@ package com.kyc.panservice.impl;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
 import com.kyc.entity.OCRDataBase;
 import com.kyc.entity.OcrPanResponse;
 import com.kyc.entity.OcrRequest;
@@ -30,6 +28,7 @@ public class OCRServiceImpl implements IOCRService {
 	 */
 	@Override
 	public OcrPanResponse getDetails(OcrRequest ocrRequest) {
+		
 		RestTemplate restTemplat = new RestTemplate();
 		String uri = "https://testapi.karza.in/v3/ocr/kyc";
 		HttpHeaders headers = new HttpHeaders();

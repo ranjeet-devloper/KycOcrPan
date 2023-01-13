@@ -2,7 +2,6 @@ package com.kyc.panservice.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.kyc.entity.OCRDataBase;
 import com.kyc.panservice.IOCRResponseLog;
 import com.kyc.repository.IOcrResponseRepository;
